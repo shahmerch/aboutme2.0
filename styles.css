@@ -1,6 +1,6 @@
 :root {
     --primary-color: #ffffff;
-    --secondary-color: #000000;
+    --secondary-color:  rgba(0, 0, 0, 0.95);
     --accent-color: #333333;
     --transition: all 0.3s ease;
     --font-family: 'BPDotsUnicase', sans-serif;
@@ -361,7 +361,7 @@ body {
 
 .project-content h3 {
     margin-bottom: 1rem;
-    font-family: 'Planet Kosmos', sans-serif;
+    font-family: 'BPDotsUnicase', sans-serif;
 }
 
 .project-content p {

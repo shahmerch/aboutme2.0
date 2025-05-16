@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Islamic Art & Math - Shahil Merchant</title>
+    <link rel="stylesheet" href="islamic-art.css">
+    <link href="https://fonts.cdnfonts.com/css/planet-kosmos" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/bpdotsunicase" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Islamic Art & Math</h1>
+        
+        <div class="controls">
+            <div class="slider-group">
+                <label for="sides">Number of Sides:</label>
+                <input type="range" id="sides" min="3" max="12" value="6" step="1">
+                <span id="sides-value">6</span>
+            </div>
+            
+            <div class="slider-group">
+                <label for="rotation">Rotation Angle:</label>
+                <input type="range" id="rotation" min="0" max="360" value="0" step="1">
+                <span id="rotation-value">0°</span>
+            </div>
+            
+            <div class="slider-group">
+                <label for="scale">Scale Factor:</label>
+                <input type="range" id="scale" min="0.1" max="2" value="1" step="0.1">
+                <span id="scale-value">1.0</span>
+            </div>
+
+            <div class="slider-group">
+                <label for="inner-sides">Number of Star Points:</label>
+                <input type="range" id="inner-sides" min="3" max="12" value="6" step="1">
+                <span id="inner-sides-value">6</span>
+            </div>
+
+            <div class="slider-group">
+                <label for="inner-scale">Inner Scale:</label>
+                <input type="range" id="inner-scale" min="0.1" max="1" value="0.5" step="0.01">
+                <span id="inner-scale-value">0.5</span>
+            </div>
+
+            <div class="slider-group">
+                <label for="line-width">Line Width:</label>
+                <input type="range" id="line-width" min="1" max="10" value="2" step="1">
+                <span id="line-width-value">2</span>
+            </div>
+
+            <div class="slider-group">
+                <label for="opacity">Opacity:</label>
+                <input type="range" id="opacity" min="0.1" max="1" value="0.5" step="0.01">
+                <span id="opacity-value">0.5</span>
+            </div>
+
+            <div class="slider-group">
+                <label for="animate">Animate Rotation:</label>
+                <input type="checkbox" id="animate">
+            </div>
+
+            <div class="slider-group">
+                <label for="animate-scale">Animate Scale:</label>
+                <input type="checkbox" id="animate-scale">
+            </div>
+
+            <div class="slider-group">
+                <label for="animate-opacity">Animate Opacity:</label>
+                <input type="checkbox" id="animate-opacity">
+            </div>
+        </div>
+
+        <div class="pattern-container">
+            <canvas id="pattern-canvas"></canvas>
+        </div>
+    </div>
+    <script src="islamic-art.js"></script>
+</body>
+</html>
