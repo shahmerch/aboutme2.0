@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shahil Merchant - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.cdnfonts.com/css/planet-kosmos" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/bpdotsunicase" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo" style="font-family: 'Planet Kosmos', sans-serif;">SM</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Shahil Merchant</h1>
+            <p>THE™ Ohio State University '25</p>
+            <div class="scroll-down" onclick="scrollToSection('about')">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>Just finished up my degree in Electrical and Computer engineering at THE™ Ohio State University \n 
+                    <br>
+                    <br>
+                    Minored in Entrepreneurship and Innovation \n
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2>My Projects</h2>
+        <div class="project-grid">
+            <a href="project1.html" class="project-card">
+                <div class="project-content">
+                    <h3>Project One</h3>
+                    <p>A modern web application built with React and Node.js</p>
+                    <div class="tech-stack">
+                        <span>React</span>
+                        <span>Node.js</span>
+                        <span>MongoDB</span>
+                    </div>
+                </div>
+            </a>
+            <a href="project2.html" class="project-card">
+                <div class="project-content">
+                    <h3>Project Two</h3>
+                    <p>Responsive e-commerce website with payment integration</p>
+                    <div class="tech-stack">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                        <span>Stripe</span>
+                    </div>
+                </div>
+            </a>
+            <a href="project3.html" class="project-card">
+                <div class="project-content">
+                    <h3>Project Three</h3>
+                    <p>Real-time chat application using WebSocket</p>
+                    <div class="tech-stack">
+                        <span>WebSocket</span>
+                        <span>Express</span>
+                        <span>Socket.io</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Get In Touch</h2>
+        <div class="contact-content">
+            <form id="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/shahmerch" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/shahil-merchant/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </footer>
+    <div class="copyright">
+        <p>Shahil Merchant 2025 © yes this was vibe coded ;)</p>
+    </div>
+    
+
+
+    <script src="script.js"></script>
+</body>
+</html>

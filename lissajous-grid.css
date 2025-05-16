@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.95);
+    font-family: 'BPDotsUnicase', sans-serif;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+}
+
+h1 {
+    font-family: 'BPDotsUnicase', sans-serif;
+    text-align: center;
+    margin: 1rem 0;
+    font-size: 2.5rem;
+}
+
+.pattern-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0.5rem;
+    padding: 0.5rem;
+    width: 100%;
+    max-width: 1000px;
+    justify-content: center;
+}
+
+.pattern-container {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 0.5rem;
+    aspect-ratio: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+}
+
+.pattern-info {
+    font-size: 0.6rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 0.3rem;
+}
+
+.pattern-canvas {
+    width: 90%;
+    height: 90%;
+    background: transparent;
+}
+
+.pattern-label {
+    font-size: 0.6rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 0.3rem;
+}
+
+@media (max-width: 1200px) {
+    .pattern-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .pattern-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .pattern-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

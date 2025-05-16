@@ -1,0 +1,83 @@
+.calculator-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgba(0, 0, 0, 0.95);
+    padding: 2rem;
+}
+
+.calculator {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    max-width: 100%;
+}
+
+.display {
+    grid-column: 1 / -1;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.5rem;
+    min-height: 80px;
+}
+
+.previous-operand {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.5rem;
+    font-family: 'BPDotsUnicase', sans-serif;
+}
+
+.current-operand {
+    color: white;
+    font-size: 2.5rem;
+    font-family: 'BPDotsUnicase', sans-serif;
+    min-height: 30px;
+}
+
+button {
+    font-family: 'BPDotsUnicase', sans-serif;
+    font-size: 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 10px;
+    padding: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60px;
+    aspect-ratio: 1;
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+.operator {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.operator:hover {
+    background: var(--accent-color);
+    transform: scale(1.05);
+}
+
+.span-two {
+    grid-column: span 2;
+    min-height: 60px;
+}

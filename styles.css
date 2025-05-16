@@ -1,0 +1,508 @@
+:root {
+    --primary-color: #ffffff;
+    --secondary-color: #000000;
+    --accent-color: #333333;
+    --transition: all 0.3s ease;
+    --font-family: 'BPDotsUnicase', sans-serif;
+    --font-size-large: 6rem;
+    --font-size-medium: 4rem;
+    --font-size-small: 1.5rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Lissajous Animation */
+@keyframes lissajous {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(100px, 0);
+    }
+    50% {
+        transform: translate(100px, 100px);
+    }
+    75% {
+        transform: translate(0, 100px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+.lissajous {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.lissajous div {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    animation: lissajous 4s linear infinite;
+}
+
+/* Add multiple points for the animation */
+.lissajous div:nth-child(2) { animation-delay: -1s; }
+.lissajous div:nth-child(3) { animation-delay: -2s; }
+.lissajous div:nth-child(4) { animation-delay: -3s; }
+
+/* Hero Section Updates */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+                url('https://source.unsplash.com/1600x900/?programming') center/cover;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+
+
+.hero h1 {
+    font-family: 'Planet Kosmos', sans-serif;
+    font-size: 8rem;
+    margin-bottom: 1rem;
+    animation: fadeInUp 1s ease;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Typing animation styles */
+.typing-text {
+    display: inline-block;
+    font-size: 1.5rem;
+    font-family: 'BPDotsUnicase', sans-serif;
+}
+
+.typed-text {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.cursor {
+    display: inline-block;
+    margin-left: 3px;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1rem 5%;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.nav-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+                url('https://source.unsplash.com/1600x900/?programming') center/cover;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 2rem;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    animation: fadeInUp 1s ease;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    animation: fadeInUp 1s ease 0.3s;
+}
+
+.scroll-down {
+    display: flex;
+    justify-content: center;
+    animation: fadeInUp 1s ease 0.6s;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.scroll-down:hover {
+    transform: scale(1.1);
+}
+
+.scroll-down span {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.scroll-down i {
+    font-size: 1.5rem;
+    animation: bounce 2s infinite;
+}
+
+/* About Section */
+.about {
+    padding: 5rem 5%;
+}
+
+.about h2,
+.projects h2,
+.contact h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+}
+
+.about-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.skills {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.skill-tags span {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.skill-tags span:hover {
+    transform: scale(1.1);
+}
+
+/* Projects Section */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Project Detail Page Styles */
+.project-detail {
+    padding: 5rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-detail h1 {
+    font-family: 'Planet Kosmos', sans-serif;
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.project-content {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 3rem;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    margin: 2rem 0;
+}
+
+.project-description {
+    margin: 2rem 0;
+}
+
+.project-description p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.project-links {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.project-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: 'BPDotsUnicase', sans-serif;
+    transition: var(--transition);
+    font-size: 1.1rem;
+}
+
+.project-button:hover {
+    background: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+/* Scroll Arrow Font */
+.scroll-down {
+    display: flex;
+    justify-content: center;
+    animation: fadeInUp 1s ease 0.6s;
+    cursor: pointer;
+    transition: var(--transition);
+    font-family: 'BPDotsUnicase', sans-serif;
+}
+
+.scroll-down:hover {
+    transform: scale(1.1);
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 2rem;
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+    backdrop-filter: blur(10px);
+}
+
+.project-card:hover {
+    transform: translateY(-5px) scale(1.02);
+}
+
+.project-content {
+    transition: var(--transition);
+}
+
+.project-content:hover {
+    transform: scale(1.02);
+}
+
+.project-content h3 {
+    margin-bottom: 1rem;
+    font-family: 'Planet Kosmos', sans-serif;
+}
+
+.project-content p {
+    margin-bottom: 1.5rem;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tech-stack span {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.tech-stack span:hover {
+    background: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+/* Contact Section */
+.contact-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#contact-form {
+    font-family: 'BPDotsUnicase', sans-serif;
+}
+
+#contact-form input,
+#contact-form textarea {
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--primary-color);
+    transition: var(--transition);
+    font-family: 'BPDotsUnicase', sans-serif;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+#contact-form textarea {
+    height: 150px;
+    resize: none;
+    font-family: 'BPDotsUnicase', sans-serif;
+}
+
+#contact-form button {
+    padding: 1rem;
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'BPDotsUnicase', sans-serif;
+    font-weight: bold;
+    transition: var(--transition);
+}
+
+#contact-form button:hover {
+    background: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+/* Footer */
+.footer {
+    padding: 2rem 5%;
+    text-align: center;
+}
+
+.copyright {
+    text-align: center;
+    padding: 2rem;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.9rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.social-links a {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+    color: var(--accent-color);
+    transform: translateY(-5px);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .hero h1 {
+        font-size: 3rem;
+    }
+    
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+}
